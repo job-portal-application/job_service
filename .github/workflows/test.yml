@@ -1,17 +1,16 @@
+# Tests workflow
 name: Run all tests
 
 on:
-  push:
-    branches:
-      - main
-
   pull_request:
     branches:
+      -development
       - main
 
 jobs:
   sonarqube:
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v4
         with:
