@@ -1,4 +1,4 @@
-# Tests workflow
+# Tests workflow for job service
 name: Run all tests
 
 on:
