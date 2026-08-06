@@ -33,15 +33,15 @@ jobs:
 
             - name: Build docker image
               run: |
-                docker build -t job-service .
+                docker build -t job-service-dev .
 
             - name: Tag docker image
               run: |
-                docker tag job-service:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/job-service:latest
+                docker tag job-service-dev:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/job-service-dev:latest
 
             - name: Push docker image to ECR
               run: |
-                docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/job-service:latest
+                docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/job-service-dev:latest
 
             - name: Deploy to ECS
               run: |

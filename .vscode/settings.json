@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "job-portal-application",
+        "projectKey": "job-portal-application_job_service"
+    }
+}

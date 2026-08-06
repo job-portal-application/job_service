@@ -12,7 +12,7 @@ export const connectKafka = async() => {
         console.log("Connecting to Kafka...");
         const kafka = new Kafka({
             clientId: 'auth-service',
-            brokers: [process.env.KAFKA_BROKER || 'localhost:9092'],
+            brokers: [process.env.KAFKA_BROKER as string],
         }); 
         admin = kafka.admin();
         await admin.connect();
